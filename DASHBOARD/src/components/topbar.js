@@ -1,36 +1,27 @@
-import React from 'react'
-import Menu from './menu';
+import React from "react";
+
+import Menu from "./Menu";
 
 
-function Topbar() {
-    return ( 
-    <>
-    <div className='container'>
-        <div className='row mt-4 border-bottom '>
-            <div className='col-4 d-flex'>
-
-                <div className='d-flex me-5'>
-                    <p>NIFTY 50</p>
-                    <p className='ms-5'>100.2</p>
-                </div>
-
-                <div className='d-flex ms-5'>
-                    <p>SENSEX</p>
-                    <p className='ms-5'>100.2</p>
-                </div>
-
-            </div>
-
-            <div className='col-8 border-start'>
-                <Menu/>
-            </div>
-
+function TopBar() {
+  return ( 
+    <div className="topbar-container">
+      <div className="indices-container">
+        <div className="nifty">
+          <p className="index">NIFTY 50</p>
+          <p className="index-points">{100.2} </p>
+          <p className="percent"> </p>
         </div>
+        <div className="sensex">
+          <p className="index">SENSEX</p>
+          <p className="index-points">{100.2}</p>
+          <p className="percent"></p>
+        </div>
+      </div>
+
+      <Menu />
     </div>
+   );
+};
 
-
-    </> 
-    );
-}
-
-export default Topbar;
+export default TopBar;

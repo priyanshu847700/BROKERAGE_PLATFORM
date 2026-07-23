@@ -1,17 +1,15 @@
-import React from 'react'
-import Topbar from './topbar';
-import Dashboard from './dashboard';
+import React from "react";
 
-
+import Dashboard from "./Dashboard";
+import TopBar from "./TopBar";
 
 function Home() {
-    return ( 
+  return (
     <>
-    <Topbar/>
-    <Dashboard/>
-    
-    </> 
-    );
-}
+      <TopBar />
+      <Dashboard />
+    </>
+  );
+};
 
 export default Home;

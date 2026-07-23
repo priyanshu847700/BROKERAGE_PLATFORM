@@ -1,33 +1,33 @@
-import React from 'react'
+import React from "react";
+import { Route, Routes } from "react-router-dom";
 
-import Watchlist from './watchlist';
-import Summary from './summary';
-import App from './app';
-import Funds from './funds';
-import Order from './order';
-import Holdings from './holdings';
-import Positions from './positions';
+import Apps from "./Apps";
+import Funds from "./Funds";
+import Holdings from "./Holdings";
 
-
-import {Routes } from 'react-router-dom'
+import Orders from "./Orders";
+import Positions from "./Positions";
+import Summary from "./Summary";
+import WatchList from "./WatchList";
 
 function Dashboard() {
-    return ( 
-    <>
-    <div className='container'>
-        <Watchlist/>
-        <div className='content'>
-            <Routes path='/' element={<Summary/>}></Routes>
-            <Routes path='/orders' element={<Order/>}></Routes>
-            <Routes path='/holdings' element={<Holdings/>}></Routes>
-            <Routes path='/positions' element={<Positions/>}></Routes>
-            <Routes path='/funds' element={<Funds/>}></Routes>
-            <Routes path='/app' element={<App/>}></Routes>
-        </div>
-    </div>
+  return (
+    <div className="dashboard-container">
 
-    </>
-    );
-}
+        <WatchList />
+      
+      <div className="content">
+        <Routes>
+          <Route exact path="/" element={<Summary />} />
+          <Route path="/orders" element={<Orders />} />
+          <Route path="/holdings" element={<Holdings />} />
+          <Route path="/positions" element={<Positions />} />
+          <Route path="/funds" element={<Funds />} />
+          <Route path="/apps" element={<Apps />} />
+        </Routes>
+      </div>
+    </div>
+  );
+};
 
 export default Dashboard;
